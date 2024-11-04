@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const BlogController_1 = require("../controller/BlogController");
 const multer_1 = __importDefault(require("../config/multer"));
 const blogRouter = express_1.default.Router();
-blogRouter.post("/creatblog", multer_1.default, BlogController_1.createBlogPost);
+blogRouter.post("/createblog", multer_1.default, BlogController_1.createBlogPost);
 blogRouter.get("/allblogs", BlogController_1.getAllBlogPosts);
 blogRouter.get("/getoneblog/:id", BlogController_1.getBlogPostById);
 exports.default = blogRouter;
