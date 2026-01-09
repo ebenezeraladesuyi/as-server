@@ -10,4 +10,7 @@ const blogRouter = express_1.default.Router();
 blogRouter.post("/createblog", multer_1.default, BlogController_1.createBlogPost);
 blogRouter.get("/allblogs", BlogController_1.getAllBlogPosts);
 blogRouter.get("/getoneblog/:id", BlogController_1.getBlogPostById);
+blogRouter.delete("/deleteoneblog/:id", BlogController_1.deleteBlogPostByIdSimple);
+blogRouter.get("/updateoneblog/:id", BlogController_1.updateBlogPost);
+blogRouter.get("/getblogsummary", BlogController_1.getBlogsSummary);
 exports.default = blogRouter;

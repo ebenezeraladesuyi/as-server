@@ -4,6 +4,7 @@ import contactUsRouter from "./routes/ContactRoutes";
 import subscribeRouter from "./routes/SubscribeRouter";
 import blogRouter from "./routes/BlogRouter";
 import commentRouter from "./routes/BlogInteractionRouter";
+import adminRouter from "./routes/adminRouter";
 
 
 const appConf = (app: Application) => {
@@ -14,6 +15,7 @@ const appConf = (app: Application) => {
     app.use("/sub", subscribeRouter)
     app.use("/blog", blogRouter)
     app.use("/action", commentRouter)
+    app.use("/admin", adminRouter)
 
 
     app.get("/", (req:Request, res: Response): any => {
